@@ -1,0 +1,540 @@
+/* Portfolio main css */
+/* 공통 */
+html, body {
+    overflow-x: hidden;
+    scroll-behavior:smooth;
+}
+
+.container {
+    width: 93.7%;
+    margin: 0 auto;
+}
+
+/* 드래그 색상 변경 */
+::selection {
+    background-color: #FFFACD;
+}
+
+/* fadeIn js */
+.animateIn {
+    opacity: 1;
+    transition: opacity 3s ease;
+}
+
+.animateOut {
+    opacity: 0;
+}
+
+
+/* main - main-visual */
+#main .main-visual {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/main_right_visual.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#main .main-visual .main-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+}
+
+#main .main-visual .main-text>span {
+    font-size: 1.875rem; /* 30px */
+}
+
+#main .main-visual .main-text>p {
+    font-size: 6rem; /* 96px */
+}
+
+/* 무한회전 */
+#main .main-visual .infinity-circle {
+    max-width: 15%;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    z-index: 88;
+}
+
+#main .main-visual .infinity-circle img{
+    width: 100%;
+    animation: rotate_image 10s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes rotate_image{
+	100% {
+    	transform: rotate(360deg);
+    }
+}
+ 
+/* Projects */
+#main .slide-wrap .slide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#main .slide-wrap h2 {
+    font-size: 7rem; /*112px*/
+    opacity: 0.2;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    animation: slide 1s ease-out;
+}
+
+/* section h2 슬라이딩 애니메이션 */
+@keyframes slide {
+    from {
+        right: -10%;
+        opacity: 0;
+    }
+    to {
+        right: 5%;
+        opacity: 0.2;
+    }
+}
+
+/* section h2 뒤로 가는 애니메이션 */
+@keyframes disappear {
+    from {
+        right: 5%;
+        opacity: 0.2;
+    }
+    to {
+        right: -10%;
+        opacity: 0;
+    }
+}
+
+#main .slide-wrap .slide-area .slide .projects-text {
+    width: 50%;
+}
+
+#main .slide-wrap .slide-area .slide .projects-text>h3 {
+    text-align: center;
+    color: #002BA0;
+    font-size: 2.5rem; /* 40px */
+    font-weight: 900;
+    margin-bottom: 5%;
+}
+
+#main .slide-wrap .slide-area .slide .projects-text>p {
+    width: 80%;
+    font-size: 1.875rem; /* 30px */
+    text-align: center;
+    margin: 0 auto;
+}
+
+#main .slide-wrap .slide-area .slide .projects-img {
+    width: 50%; 
+}
+
+#main .slide-wrap .slide-area .slide .projects-img img {
+    width: 100%;
+}
+
+#main .slide-wrap .slide-area .slide .projects-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+#main .slide-wrap .slide-area .slide .projects-btn>a {
+    width: 350px;
+    height: 50px;
+    font-size: 1.5625rem; /* 25px */
+    border: 1px solid #232323;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: inherit;
+    margin-top: 1%;
+}
+
+/* Project-btn hover style effect */
+#main .slide-wrap .slide-area .slide .projects-btn>a:hover {
+    background-color: #232323;
+    color: #fdfdfd;
+}
+
+/* Projects - slide */
+#main .slide-wrap {
+    width: 100%;
+    height: 120vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#main .slide-wrap .slide-area {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+}
+
+#main .slide-wrap .slide-area .slide {
+    width: 100%;
+    position: absolute; /*슬라이드 가로 배치 위한 위치 조정*/
+    top: 0;
+    /*left의 위치는 제이쿼리로 지정*/
+}
+
+#main .slide-wrap .slideNav a {
+    background-image: url(../images/sprites.png);
+    background-repeat: no-repeat;
+    text-indent: -9999em;  
+    position: absolute;
+    top: 50%;
+    width: 72px;
+    height: 72px;
+    transform: translateY(-50%); 
+}
+
+#main .slide-wrap .slideNav a.prev{
+    background-position: 0 -20px;
+    left: 2%;
+}
+
+#main .slide-wrap .slideNav a.next{
+    right: 2%;
+    background-position: -80px -20px;
+}
+
+/* 제이쿼리를 위한 스타일 */
+#main .slide-wrap .slideNav a.disabled{
+    display: none;
+}
+
+#main .slide-wrap .slideIndicator{
+    width: 100%;
+    /* height: 16px; */
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    text-align: center;
+}
+
+#main .slide-wrap .slideIndicator>a{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #232323;
+    background-color: transparent;
+    text-indent: -9999em;
+    margin: 0.4%;
+}
+
+#main .slide-wrap .slideIndicator a.active{
+    width: 40px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: #232323;
+}
+
+
+/* abilities */
+#main .abilities {
+    width: 100%;
+    /* height: 960px; */
+    /* height: 100vh; */
+    position: relative;
+}
+
+#main .abilities h2 {
+    font-size: 7rem; /*112px*/
+    opacity: 0.2;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    animation: slide-left 1s ease-out;
+    z-index: 77;
+}
+
+/* section h2 슬라이딩 애니메이션 */
+@keyframes slide-left {
+    from {
+        left: -10%;
+        opacity: 0;
+    }
+    to {
+        left: 5%;
+        opacity: 0.2;
+    }
+}
+
+/* section h2 뒤로 가는 애니메이션 */
+@keyframes disappear-left {
+    from {
+        left: 5%;
+        opacity: 0.2;
+    }
+    to {
+        left: -10%;
+        opacity: 0;
+    }
+}
+
+#main .abilities .abilities-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 12% 0 10%;
+    background-color: #add8da;
+}
+
+#main .abilities .abilities-wrap .ab-contents {
+    position: relative;
+}
+
+#main .abilities .abilities-wrap .ab-contents .ab-img {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#main .abilities .abilities-wrap .ab-contents .ab-text {
+    width: 300px;
+    border: 1px solid #fdfdfd;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFACD;
+    opacity: 0;
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+/* abilities hover style effect */
+#main .abilities .abilities-wrap .ab-contents .ab-text:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+/* About me */
+#main .about-me {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#main .about-me h2 {
+    font-size: 7rem; /*112px*/
+    opacity: 0.2;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    animation: slide 1s ease-out;
+}
+
+#main .about-me .about-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12% 0 5%;
+}
+
+#main .about-me .about-wrap .about-img {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    padding-bottom: 13%;
+}
+
+#main .about-me .about-wrap .about-img img {
+    max-width: 350px;
+    border-radius: 50%;
+    padding-bottom: 5%;
+}
+
+#main .about-me .about-wrap .about-img span{
+    font-size: 1.875rem; /*30px*/
+    font-weight: 900;
+    text-align: center;
+}
+
+#main .about-me .about-wrap .about-text {
+    width: 65%;
+}
+
+#main .about-me .about-wrap .about-text .content {
+    font-size: 2.1875rem; /*35px*/
+    padding-bottom: 5%;
+}
+
+#main .about-me .about-wrap .about-text .content strong {
+    color: #8ECFD3;
+    text-shadow: 0px 1px 3px #313131;
+}
+
+#main .about-me .about-wrap .about-text .icon-keyword  {
+    padding-bottom: 5%;
+}
+
+#main .about-me .about-wrap .about-text .icon-keyword>span {
+    font-size: 2.1875rem; /*35px*/
+    font-weight: 900;
+}
+
+#main .about-me .about-wrap .about-text .icon-keyword .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main .about-me .about-wrap .about-text .icon-keyword .icons .icons01 img {
+    width: 300px;
+    max-width: 100%;
+    padding-bottom: 10%;
+}
+
+#main .about-me .about-wrap .about-text .icon-keyword .icons .icons01>p {
+    font-size: 1.875rem; /*30px*/
+    text-align: center;
+}
+
+#main .about-me .about-wrap .about-text .edu_certi {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem; /*20px*/
+}
+
+#main .about-me .about-wrap .about-text .edu_certi span {
+    font-size: 1.375rem; /*22px*/
+    font-weight: 900;
+}
+
+/* desktop first */
+@media screen and (max-width:1500px) {
+    /* About me */
+    #main .about-me .about-wrap {
+        flex-direction: column;
+    }
+
+    #main .about-me .about-wrap .about-img {
+        padding-bottom: 2%;
+    }
+
+    #main .about-me .about-wrap .about-text {
+        width: 100%;
+    }
+
+    #main .about-me .about-wrap .about-text .edu_certi {
+        justify-content: space-between;
+        font-size: 1.875rem; /*30px*/
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    /* 공통 */
+    #main .slide-wrap h2,
+    #main .abilities h2,
+    #main .about-me h2 {
+        font-size: 4rem; /* 64px */
+    }
+
+    /* Project */
+    #main .slide-wrap .slide-area .slide .projects-text>h3 {
+        font-size: 1.875rem; /* 30px */
+        font-weight: 900;
+    }
+    
+    #main .slide-wrap .slide-area .slide .projects-text>p {
+        width: 80%;
+        font-size: 1.25rem; /* 20px */
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* Abilities */
+    #main .abilities .abilities-wrap {
+        padding-top: 15%;
+    }
+
+    /* About me */
+    #main .about-me .about-wrap .about-text .content {
+        font-size: 1.5625rem; /*25px*/
+    }
+
+    #main .about-me .about-wrap .about-text .icon-keyword>span {
+        font-size: 1.5625rem; /*25px*/
+    }
+
+    #main .about-me .about-wrap .about-text .icon-keyword .icons .icons01>p {
+        font-size: 1.25rem; /*20px*/
+    }
+    
+    #main .about-me .about-wrap .about-text .edu_certi {
+        font-size: 1rem;
+    }
+    
+    #main .about-me .about-wrap .about-text .edu_certi span {
+        font-size: 1.25rem; /*20px*/
+    }
+}
+
+@media screen and (max-width:769px) {
+    /* main-visual */
+    #main .main-visual .main-text>p {
+        font-size: 4rem; /* 64px */
+    }
+
+    /* Project */
+    #main .slide-wrap .slide {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #main .slide-wrap .slide-area .slide .projects-text {
+        width: 100%;
+    }
+
+    #main .slide-wrap .slide-area .slide .projects-btn>a {
+        font-size: 1.25rem; /*20px*/
+    }
+
+    #main .slide-wrap .slideIndicator {
+        display: none;
+    }
+
+    /* Abilities */
+    #main .abilities .abilities-wrap {
+        padding: 45% 0 5%;
+    }
+
+    #main .abilities .abilities-wrap .ab-contents {
+        margin-bottom: 5%;
+    }
+
+    /* about-me */
+    #main .about-me .about-wrap {
+        padding: 45% 0 5%;
+    }
+
+    #main .about-me .about-wrap .about-img span{
+        font-size: 1.5625rem; /*25px*/
+    }
+
+    #main .about-me .about-wrap .about-text .edu_certi {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #main .about-me .about-wrap .about-text .edu_certi .certi {
+        margin-top: 10px;
+    }
+}

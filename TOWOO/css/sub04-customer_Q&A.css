@@ -1,0 +1,38 @@
+/* sub page 고객지원(Q&A) css */
+.qa {
+    padding: 50px 0;
+}
+
+.qa .board-header {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.qa .board-body table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;   
+}
+
+.qa .board-body table tr {
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.qa .board-body table thead {
+    color: #002BA0;
+    font-weight: 600;
+    background-color: rgba(0,43,160,0.2);
+}
+
+.qa .board-body table tbody tr td:nth-child(2) {
+    cursor: pointer;
+}
+
+@media screen and (max-width:769px) {
+    .qa .board-body table tr td:last-child {
+        display: none;
+    }
+}

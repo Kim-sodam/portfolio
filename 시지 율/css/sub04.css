@@ -1,0 +1,61 @@
+/* sub page - 둘러보기 css */
+.interior {
+    padding: 50px 0;
+}
+
+.interior h2 {
+    font-size: 2.5rem;
+    font-family: 'GangwonEdu_OTFBoldA';
+    color: #232323;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.interior .swiper {
+    width: 62.5%;
+    /* max-width: 1200px; */
+    /* height: 500px; */
+    height: 100%;
+    margin: 0 auto;
+}
+
+.interior .swiper .swiper-slide {
+    width: 100%;
+    height: 500px;
+}
+
+.interior .swiper .swiper-wrapper .slide01 {
+    background: url(../images/slide01.jpg) no-repeat ;
+}
+
+.interior .swiper .swiper-wrapper .slide02 {
+    background: url(../images/slide02.jpg) no-repeat ;
+}
+
+.interior .swiper .swiper-wrapper .slide03 {
+    background: url(../images/slide03.jpg) no-repeat ;
+}
+
+.interior .swiper .swiper-wrapper .slide04 {
+    background: url(../images/slide04.jpg) no-repeat ;
+}
+
+.interior .swiper .swiper-wrapper .slide05 {
+    background: url(../images/slide05.jpg) no-repeat ;
+}
+
+.interior .swiper .swiper-wrapper .slide06 {
+    background: url(../images/slide06.jpg) no-repeat ;
+}
+
+@media screen and (max-width:1200px) {
+    .interior .swiper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .interior .swiper {
+        width: 100%;
+    }
+}

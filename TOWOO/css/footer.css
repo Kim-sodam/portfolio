@@ -1,0 +1,47 @@
+/* 푸터 */
+footer {
+    width: 100%;
+    background-color: #707070;
+    overflow: hidden;
+}
+
+.ft-wrap {
+    /* width: 75%; */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 56px;
+}
+
+.ft_text-2 ul {
+    display: flex;
+    margin-top: 25px;
+}
+
+.ft_text-2 ul li {
+    margin-right: 20px;
+}
+
+@media screen and (max-width:1200px) {
+    /* 푸터 */
+    footer {
+        font-size: 0.875rem; /*14px*/
+    }
+
+    .ft_text {
+        background-color: antiquewhite;
+    }
+
+    .ft_text-2 ul {
+        margin-top: 10px;
+    }
+
+    .ft_text-2 ul {
+        flex-direction: column;
+    }
+
+    .ft_text-2 ul li {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,198 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img{
+	vertical-align: top;
+	max-width: 100%;
+}
+
+#wrap{
+	width: 340px;
+	margin: 50px auto;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 30px;
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu a{
+	font-size: 20px;
+	color: #666;
+}
+
+figure .img{
+	width: 200px;
+	height: 200px;
+	margin: 20px auto;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+figure h1{
+	font-size: 1.5em; /*기본크기 16px 기준 h1 2em = 32px*/
+	text-align: center;
+	text-transform: uppercase;
+	color: #555;
+}
+
+figure h2{
+	font-size: 0.875em;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+	color: #bbb;
+	margin: 5px 0 30px;
+}
+
+figure .btn-more{
+	display: block;
+	width: 180px;
+	height: 40px;	
+	margin: 0 auto 30px;
+	border-radius: 20px;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.contact li{
+	padding: 10px 0;
+}
+
+.contact li i{
+	width: 20%;
+	text-align: center;
+	text-shadow: 2px 2px 2px #eee;
+	color: #555;
+}
+
+.contact li span{
+	font-family: 'Orbitron';
+	font-size: 14px;
+	color: #555;
+}
+
+.contact li:first-child{
+	border-bottom: 1px solid #ddd;
+}
+
+nav ul{
+	display: flex;
+	justify-content: center;
+}
+
+nav li a{
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 20px 10px 0;
+	border-radius: 50%;
+	opacity: 0.4;
+	filter: saturate(0.7); /*요소에 그래픽 효과 줄 수 있는 기능*/
+}
+
+nav li a.on{
+	opacity: 1;
+	filter: saturate(1);
+}
+
+nav li:nth-child(1) a{
+	background-color: #35e0f7;
+	box-shadow: 5px 5px 10px rgba(74, 255, 255, 0.7);
+}
+
+nav li:nth-child(2) a{
+	background-color: #55f5cd;
+	box-shadow: 5px 5px 10px rgba(85, 245, 205, 0.7);
+}
+
+nav li:nth-child(3) a{
+	background-color: #ff80df;
+	box-shadow: 5px 5px 10px rgba(255, 128, 223, 0.7);
+}
+
+nav li:nth-child(4) a{
+	background-color: #a794fd;
+	box-shadow: 5px 5px 10px rgba(167, 148, 253, 0.7);
+}
+
+/* 각 파일 개별 스타일 */
+/* member1 */
+.bg1{
+	background-color: #ebfaff;
+}
+
+.bg1 figure .btn-more{
+	background: linear-gradient(45deg, #4affff, #35e0f7);
+	box-shadow: 5px 10px 20px rgba(0, 255, 255, 0.4);
+}
+
+.bg1 figure .img{
+	box-shadow: 5px 15px 30px rgba(173, 216, 230, 0.8);
+}
+
+/* member2 */
+.bg2{
+	background-color: #edffed;
+}
+
+.bg2 figure .btn-more{
+	background: linear-gradient(45deg, #a0ff9d, #55f5b2);
+	box-shadow: 5px 10px 20px rgba(33, 250, 105, 0.4);
+}
+
+.bg2 figure .img{
+	box-shadow: 5px 15px 30px rgba(189, 204, 183, 0.8);
+}
+
+/* member3 */
+.bg3{
+	background-color: #fff3fd;
+}
+
+.bg3 figure .btn-more{
+	background: linear-gradient(45deg, #ef74ff, #ff11c4);
+	box-shadow: 5px 10px 20px rgba(255, 17, 196, 0.4);
+}
+
+.bg3 figure .img{
+	box-shadow: 5px 15px 30px rgba(252, 99, 214, 0.2);
+}
+
+/* member4 */
+.bg4{
+	background-color: #f5f0ff;
+}
+
+.bg4 figure .btn-more{
+	background: linear-gradient(45deg, #8e74ff, #a011ff);
+	box-shadow: 5px 10px 20px rgba(160, 17, 255, 0.4);
+}
+
+.bg4 figure .img{
+	box-shadow: 5px 15px 30px rgba(183, 82, 250, 0.2);
+}

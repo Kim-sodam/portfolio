@@ -1,0 +1,141 @@
+/* sub page 사업소개 css */
+/* 설명 */
+#sub-main section h2 {
+    font-size: 2.5rem; /* 40px */
+    text-align: center;
+    padding: 50px 0 20px;
+}
+
+#sub-main .contents p {
+    text-align: center;
+}
+
+#sub-main .contents-img img {
+    width: 100%;
+    padding-top: 20px;
+    vertical-align: bottom;
+}
+
+/* 주요 프로젝트 */
+#sub-main .project {
+    background-color: #E5E5E5;
+    color: #2f2f2f;
+    padding-bottom: 70px;
+}
+
+#sub-main .project .pro-wrap .pro {
+    max-width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#sub-main .project .pro-wrap .pro-img {
+    width: calc(100%/3 - 50px);
+    margin-bottom: 50px;
+}
+
+#sub-main .project .pro-wrap .pro-img img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+#sub-main .project .pro-wrap .pro-img .pro-text {
+    background-color: #fdfdfd;
+    height: 150px;
+    padding: 15px;
+    font-size: 1.25rem; /* 20px */
+    overflow: hidden;
+}
+
+/* 사업실적 */
+#sub-main .performance {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    color: #2f2f2f;
+    font-size: 1.25rem; /* 20px */
+    margin-bottom: 100px;
+}
+
+#sub-main .performance th,
+#sub-main .performance td {
+    height: 70px;
+}
+
+#sub-main .performance th {
+    border-top: 3px solid #707070;
+    border-bottom: 1px solid #707070;
+}
+
+#sub-main .performance th:nth-child(1),
+#sub-main .performance td:nth-child(1) {
+    /* width: 160px; */
+    width: 11%;
+    text-align: center;
+}
+
+#sub-main .performance th:nth-child(2) {
+    /* width: 724px; */
+    width: 50%;
+    text-align: center;
+}
+
+#sub-main .performance th:nth-child(3),
+#sub-main .performance td:nth-child(3) {
+    /* width: 140px; */
+    width: 9.7%;
+    text-align: center;
+}
+
+#sub-main .performance th:nth-child(4),
+#sub-main .performance td:nth-child(4) {
+    text-align: center;
+}
+
+#sub-main .performance td {
+    border-bottom: 1px solid #707070;
+}
+
+/* desktop first */
+/* sub page 사업소개 반응형 */
+@media screen and (max-width:1200px) {
+    /* 서브페이지 비주얼 텍스트 */
+    #sub-visual .sub_visual-text .p-1 {
+      font-size: 3.125rem; /*50px*/
+    }
+  
+    /* 주요 프로젝트 */
+    #sub-main .project {
+      background-color: transparent;
+      padding-bottom: 0;
+    }
+
+    #sub-main .project .pro-wrap .pro-img {
+      width: calc(100%/2 - 2px);
+    }
+  
+    #sub-main .project .pro-wrap .pro-img .pro-text {
+      background-color: transparent;
+    }
+
+    /* 사업실적 */
+    #sub-main .performance th {
+      height: 60px;
+    }
+  
+    #sub-main .performance td {
+      height: 80px;
+    }
+  
+    #sub-main .performance th:nth-child(3),
+    #sub-main .performance td:nth-child(3) {
+      display: none;
+    }
+  
+    #sub-main .performance th:nth-child(4),
+    #sub-main .performance td:nth-child(4) {
+      display: none;
+    }  
+}

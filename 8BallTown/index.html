@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8BallTown | Home</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+     <!-- Link Swiper's CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="logo">
+            <h1><a href="index.html"><img src="./image/logo.png" alt="8BallTown 로고"></a></h1>
+        </div>
+        <nav id="nav">
+            <ul class="gnb">
+                <li><a href="#content01">Artists</a></li>
+                <li><a href="https://www.youtube.com/@8BallTown" target="_blank">Videos</a></li>
+                <li><a href="https://www.8balltown.store/" target="_blank">Store</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <main id="main">
+        <!-- main-visual -->
+        <section class="main-visual">
+            <div class="frame">
+                <img src="./image/main-visual_frame.png" alt="main-visual 프레임">
+            <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./image/main-visual1.jpg" alt="메인 비주얼 이미지">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/main-visual2.jpg" alt="메인 비주얼 이미지">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/main-visual3.jpg" alt="메인 비주얼 이미지">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-text">
+                <p>음악 레이블 및 음반 기획 제작사.</p>
+                <p>다양한 장르의 아티스트들이 소속되어 있으며 훵크, 힙합, R&B가 대표적인 장르.</p>
+                <p>특히 90년대 R&B를 현대의 느낌으로 재해석하며, 그 외에도 다양한 장르의 음악을 제작.</p>
+            </div>
+        </section>
+        <!-- //main-visual -->
+        
+        <!-- artists -->
+        <section class="artists" id="content01">
+            <div class="artist-text-wrap">
+              <div class="artists-left">
+                <h2>Artists</h2>
+                <span>다양한 소속 아티스트를 살펴보세요.</span>
+                <div class="artists-list-wrap">
+                    <ul class="artists-list">
+                        <li><a href="#">KIRIN</a></li>
+                        <li><a href="#">SFC.JGR</a></li>
+                        <li><a href="#">Noizeegu</a></li>
+                        <li><a href="#">meenoi</a></li>
+                        <li><a href="#">Zin</a></li>
+                        <li><a href="#">Xin Seha</a></li>
+                        <li><a href="#">WEKEYZ</a></li>
+                        <li><a href="#">Bronze</a></li>
+                        <li><a href="#">Monocat</a></li>
+                        <li><a href="#">Hookuo</a></li>
+                        <li><a href="#">DJ Jeyon</a></li>
+                        <li><a href="#">Jambino</a></li>
+                        <li><a href="#">Team NY</a></li>
+                        <li><a href="#">YOYO THE UNITY</a></li>
+                    </ul>
+                </div>
+              </div>
+              <div class="artists-right">
+                <h3>8BallTown</h3>
+
+            </div>
+        </section>
+        <!-- //artists -->
+
+        <!-- News letter -->
+        <section class="news-letter">
+            <div class="news-letter-wrap">
+                <div class="news-letter-text">
+                    <h2>News Letter</h2>
+                    <p>8BallTown의 새로운 소식을 가장 먼저 만나보세요.</p>
+                    <span>e-mail address</span>
+                </div>
+                <div class="subscribe">
+                    <input type="email" class="mail-input" id="mail">
+                    <button class="sb-btn">Subscribe</button>
+                </div>
+            </div>
+        </section>
+        <!-- //News letter -->
+    </main>
+    <!-- //main -->
+
+    <!-- footer -->
+    <footer id="footer">
+        <small>©8BallTown. All rights reserved.</small>
+    </footer>
+    <!-- //footer -->
+
+
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+       var swiper = new Swiper(".mySwiper", {
+         autoplay:{ // 슬라이드 자동재생
+           delay: 2000, // 자동재생 시간 설정
+           disableOnInteraction: false // 스와이프 후 자동재생: true: 스와이프 후 자동재생X, false: 스와이프 후 자동재생O
+         },
+
+         loop:true, // 슬라이드 반복 여부 -> 사용하지 않을 시 false로 변경하거나 loop 삭제
+       });
+     </script>
+</body>
+</html>

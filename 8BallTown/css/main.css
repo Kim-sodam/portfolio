@@ -1,0 +1,179 @@
+/* 공통 */
+section {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+/* main-visual */
+#main .main-visual .frame {
+    width: 100vw;
+    max-height: 100vh;
+}
+
+#main .main-visual .frame>img {
+    width: 100%;
+    height: 71vh;
+    z-index: 999;
+    position: relative; 
+}
+
+/* main-visual: 슬라이드 */
+#main .main-visual .frame .swiper { /* 슬라이드 크기 (원래 풀페이지 )*/
+    /* width: 100%;
+    height: 100%; */
+    width: 90%;
+    height: 60vh; 
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#main .main-visual .frame .swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#main .main-visual .frame .swiper .swiper-slide>img {
+    display: block;
+    width: 100%;
+    height: 69vh;    
+    margin: 0 auto;
+}
+
+#main .main-visual .main-text {
+    text-align: center;
+    font-size: var(--font-medium);
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 50px 20px 100px;
+}
+
+/* artists */
+#main .artists .artist-text-wrap {
+    width: 100%;
+    display: flex;
+    background-color: #232323;
+}
+
+#main .artists .artist-text-wrap .artists-left {
+    width: 35%;
+    padding: 50px 0 0 50px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#main .artists .artist-text-wrap .artists-left h2 {
+    font-size: var(--font-large);
+    margin-bottom: 20px;
+}
+
+#main .artists .artist-text-wrap .artists-left span {
+    font-size: var(--font-small);
+    font-weight: 700;
+}
+
+#main .artists .artist-text-wrap .artists-left .artists-list-wrap {
+    width: 80%;
+    padding: 10px 0 50px; 
+}
+
+#main .artists .artist-text-wrap .artists-left .artists-list-wrap .artists-list li{
+    height: 45px;
+    font-size: var(--font-small);
+    font-weight: 600;
+    text-align: left;
+    line-height: 45px;
+    padding-left: 10px;
+    border-top: 1px solid #ccc;
+}
+
+#main .artists .artist-text-wrap .artists-left .artists-list-wrap .artists-list li:hover {
+    color: #232323;
+    background-color: #fdfdfd;
+    cursor: pointer;
+}
+
+#main .artists .artist-text-wrap .artists-left .artists-list-wrap .artists-list li:focus {
+    color: #232323;
+    background-color: #fdfdfd;
+}
+
+#main .artists .artist-text-wrap .artists-left .artists-list-wrap .artists-list li:first-child {
+    border-top: 3px solid #ccc;
+}
+
+#main .artists .artist-text-wrap .artists-left .artists-list-wrap .artists-list li:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+#main .artists .artist-text-wrap .artists-right {
+    width: 65%;
+    padding-top: 50px;
+    border-left: 1px solid #ccc;
+    position: relative;
+}
+
+#main .artists .artist-text-wrap .artists-right h3 {
+    font-size: 4rem;
+    font-family: 'Ultra', serif;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #fdfdfd;
+}
+
+/* News letter */
+#main .news-letter .news-letter-wrap {
+    padding: 50px;
+}
+
+#main .news-letter .news-letter-wrap .news-letter-text h2 {
+    font-size: var(--font-large);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+#main .news-letter .news-letter-wrap .news-letter-text p {
+    font-size: var(--font-medium);
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 20px;
+}
+
+#main .news-letter .news-letter-wrap .subscribe .mail-input {
+    width: 25vw;
+    height: 5vh;
+    padding: 10px;
+    font-size: var(--font-small);
+    border: 3px solid #232323;
+}
+
+#main .news-letter .news-letter-wrap .subscribe .sb-btn {
+    /* width: 10%; */
+    width: 12vw;
+    height: 5vh;
+    border: 3px solid #232323;
+    font-size: var(--font-medium);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #232323;
+    color: #fdfdfd;
+}
+
+#main .news-letter .news-letter-wrap .subscribe .sb-btn:hover {
+    color: #232323;
+    background-color: #fdfdfd;
+}
+
+@media screen and (max-width:1200px) {
+    
+}

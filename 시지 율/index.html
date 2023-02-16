@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시지 율 | Home</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./icons/favicon.ico">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+    <!-- //Header -->
+
+    <!-- Main -->
+    <main id="main">
+        <!-- Main visual -->
+        <section class="main-visual">
+            <picture>
+                <source srcset="./images/main-visual-m.jpg" media="(max-width:1200px)">
+                <img src="./images/main-visual.jpg" alt="메인 비주얼 이미지">
+            </picture>
+            <div class="main-visual-wrap">
+                <div class="main-visual-text">
+                    <h2>언제나 함께하는<br>시지 율 정신건강의학과입니다.</h2>
+                </div>
+                <div class="scroll-text">
+                    <span>scroll to discover</span>
+                    <img src="./images/main-scroll.png" alt="스크롤 이미지">
+                </div>
+                <div class="visual-text-deco">
+                    <span>siji-yul Neuropsychiatric Clinic</span>
+                </div>
+                <div class="reservation-icon">
+                    <a href="#"><img src="./images/예약아이콘.png" alt="예약하기 이미지"></a>
+                </div>
+                <!-- 예약하기 폼 모달창 -->
+                <div class="form-layer">
+                    <div class="modal">
+                        <form class="reservation-form">
+                            <div class="reservation-form-top">
+                                <h3>상담 예약신청</h3>
+                                <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                            </div>
+                            <p>불편한 걸음 없으시도록 예약 후 방문하시면 편안하게 상담 받으실 수 있습니다.</p>
+                            <span>월, 수, 금 09:00~18:00 / 화, 목, 토 09:00~13:00 / 점심시간 13:00~14:30 / 일, 공휴일 휴진</span>
+                            <div class="form-wrap">
+                                <div class="name_tel-wrap">
+                                    <div>
+                                        <label for="name">성함*</label><br>
+                                        <input type="text" id="name">
+                                    </div>
+                                    <div>
+                                        <label for="phone">연락처*</label><br>
+                                        <input type="tel" id="phone">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="reservation">희망 예약일*</label><br>
+                                    <input type="date"  id="reservation">
+                                </div>
+                                <div>
+                                    <label for="writing">증상 및 기타</label><br>
+                                    <textarea id="writing"></textarea>
+                                </div>
+                                <div class="reservation-text">
+                                    <label for="agree"><input type="checkbox" id="agree">개인정보수집이용 동의</label>
+                                    <p>*예약신청 확인 후에 연락드리겠습니다.</p>
+                                    <button>예약 신청</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                <!-- //예약하기 폼 모달창 -->
+                </div>
+            </div>
+        </section>
+        <!-- //Main visual -->
+
+        <!-- 이용안내 -->
+        <section class="guide">
+            <div class="guide-wrap">
+                <img src="./images/section01-deco.jpg" alt="이용안내 배경 이미지">
+                <div class="guide-text">
+                    <h3>마음을 듣는<br>고요한 작은 안식처</h3>
+                    <p>힘들고 지칠 때,<br>회복이 필요할 때,<br>쉼을 위한 시지 율 정신건강의학과가 있습니다.<br>시지 율로 오세요.</p>
+                    <button>이용안내</button>
+                </div>
+            </div>
+        </section>
+        <!-- //이용안내 -->
+
+        <!-- 진료과목 -->
+        <section class="subjects">
+            <div class="subjects-wrap">
+                <div class="subjects-text">
+                    <h3>언제나 함께하는 율</h3>
+                        <div class="text-content">
+                            <p>시지 율 정신건강의학과는 찾아주신 모든 분들의 안정된 마음을 위해 쾌적한 시설을 제공하고 있습니다.<br>또한 최고의 경력과 경험을 갖춘 전문 치료진이 정신건강 서비스를 제공합니다.</p>
+                            <a href="#">진료과목&#62;</a>
+                        </div>
+                </div>
+                <div class="subjects-list">
+                    <ul>
+                        <li>불면증, 수면장애</li>
+                        <li>불안,공황장애,강박증</li>
+                        <li>우울증, 조울증, 화병</li>
+                        <li>PTSD</li>
+                        <li>폭식, 비만 클리닉</li>
+                        <li>발달장애, 틱장애</li>
+                        <li>ADHD, 아스퍼거</li>
+                        <li>학교부적응, 학교폭력</li>
+                        <li>기억장애, 건망증, 치매</li>
+                        <li>게임중독, 스마트폰중독</li>
+                        <li>알콜중독, 알콜남용</li>
+                        <li>교사스트레스(교사지원)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //진료과목 -->
+
+        <!-- 협력기관 -->
+        <section class="hospital">
+            <div class="hospital-wrap">
+                <div class="hospital-text">
+                    <h3>시지 율과 함께하는 협력기관</h3>
+                    <p>시지 율 정신건강의학과는 주요 대학병원과의 협력을 통해 더욱 발전하고 믿을만한 병원으로 거듭나도록 노력하겠습니다.</p>
+                </div>
+                <div class="hospital-logo">
+                    <img src="./images/경대병원로고1.png" alt="경북대 병원 로고">
+                    <img src="./images/대가대병원로고2.png" alt="대가대 병원 로고">
+                    <img src="./images/영남대병원로고3.png" alt="영남대 병원 로고">
+                    <img src="./images/계명대병원로고4.png" alt="계명대 병원 로고">
+                </div>
+            </div>
+        </section>
+        <!-- //협력기관 -->
+
+        <!-- 정보 -->
+        <section class="information">
+            <div class="information-wrap">
+                <div class="time-list">
+                    <h3>불편한 걸음이 없으시도록 방문 전 꼭 확인해주세요.</h3>
+                    <ul>
+                        <li>월 09:00~18:00  점심시간(13:00~14:30)</li>
+                        <li>화 09:00~13:00</li>
+                        <li>수 09:00~18:00  점심시간(13:00~14:30)</li>
+                        <li>목 14:00~18:00</li>
+                        <li>금 09:00~18:00  점심시간(13:00~14:30)</li>
+                        <li>토 09:00~13:00</li>
+                        <li>일, 공휴일 휴진</li>             
+                    </ul>
+                </div>
+                <form>
+                    <h3>예약하기</h3>
+                    <div class="name_tel-wrap">
+                        <div>
+                            <label for="name">성함*</label><br>
+                            <input type="text" id="name">
+                        </div>
+                        <div>
+                            <label for="phone">연락처*</label><br>
+                            <input type="tel" id="phone">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="reservation">희망 예약일*</label><br>
+                        <input type="date"  id="reservation">
+                    </div>
+                    <div>
+                        <label for="writing">증상 및 기타</label><br>
+                        <textarea id="writing"></textarea>
+                    </div>
+                    <div class="reservation-text">
+                        <label for="agree"><input type="checkbox" id="agree">개인정보수집이용 동의</label>
+                        <p>*예약신청 확인 후에 연락드리겠습니다.</p>
+                        <button>예약 신청</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- //정보 -->
+    </main>
+    <!-- //Main -->
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <!-- //Footer -->
+
+    <script src="./js/header_footer.js"></script>
+</body>
+</html>

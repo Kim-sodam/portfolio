@@ -1,0 +1,664 @@
+/* main page css */
+/* 공통 */
+section {
+    /* height: 100%; */
+    overflow-X: hidden;  
+}
+
+.visual-text-deco {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    transform: rotate(-90deg);
+}
+
+.visual-text-deco span {
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 0.875rem;  
+}
+
+/* main-visual */
+.main-visual {
+    position: relative;
+}
+
+.main-visual picture img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.main-visual .main-visual-wrap .main-visual-text {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-family: 'GangwonEdu_OTFBoldA';
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    animation: flash 1.5s ease-in;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.main-visual .main-visual-wrap .main-visual-text h2 {
+    font-size: 3.75rem;
+}
+
+.main-visual .main-visual-wrap .scroll-text {
+    width: 110px;
+    position: absolute;
+    bottom: -2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-visual .main-visual-wrap .scroll-text span{
+    font-family: 'GangwonEdu_OTFBoldA';
+}
+
+.main-visual .main-visual-wrap .scroll-text img {
+    width: 6px;
+    display: block;
+    margin: 0 auto; 
+}
+
+.main-visual .main-visual-wrap .reservation-icon {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    z-index: 99;
+}
+
+.main-visual .main-visual-wrap .reservation-icon a img {
+    width: 80px;
+    height: 80px;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* 이용안내 */
+.guide {
+    width: 100%;
+    height: 960px;
+    background: url(../images/guide.jpg) no-repeat 0 0 ;
+    background-size: cover;
+    position: relative;
+}
+
+.guide .guide-wrap {
+    /* width: 1200px; */
+    width: 62.5%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.guide .guide-wrap img {
+    max-width: 100%;
+}
+
+.guide .guide-wrap .guide-text {            
+    color: #232323;
+    margin-left: 3.3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.guide .guide-wrap .guide-text h3 {
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 2.5rem;
+}
+
+.guide .guide-wrap .guide-text p {
+    font-family: 'Pretendard-Regular';
+    font-size: 1.25rem;
+}
+
+.guide .guide-wrap .guide-text button {
+    width: 180px;
+    height: 45px;
+    background-color: transparent;
+    border: 1px solid #68744C;
+    color: #68744C;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+/* 진료과목 */
+.subjects {
+    width: 100%;
+    height: 960px;
+    background: url(../images/subjects.jpg) no-repeat 0 0;
+    background-size: cover;
+    position: relative;
+}
+
+.subjects .subjects-wrap {
+    /* width: 1200px; */
+    width: 62.5%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subjects .subjects-wrap .subjects-text {
+    /* padding-top: 150px; */
+    margin-bottom: 30px;
+    display: flex;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.subjects .subjects-wrap .subjects-text h3 {
+    width: 300px;
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 2.5rem;
+    margin-right: 50px;
+}
+
+.subjects .subjects-wrap .subjects-text .text-content {
+    /* width: 850px; */
+    width: 70%;
+    font-family: 'Pretendard-Regular';
+}
+
+.subjects .subjects-wrap .subjects-text .text-content p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.subjects .subjects-wrap .subjects-text .text-content a {
+    font-size: 1.25rem;
+}
+
+.subjects .subjects-wrap .subjects-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.subjects .subjects-wrap .subjects-list ul li {
+    width: 30%;
+    height: 80px;
+    border: 1px solid #fdfdfd;
+    font-family: 'Pretendard-Regular';
+    text-align: center;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    line-height: 80px;
+    margin: 1%;
+}
+
+/* 협력기관 */
+.hospital {
+    width: 100%;
+    /* height: 960px; */
+    background: url(../images/hospital.jpg) no-repeat 0 0;
+    background-size: cover;
+    position: relative;
+}
+
+.hospital .hospital-wrap {
+    /* width: 1200px; */
+    width: 62.5%;
+    margin: 0 auto;
+    padding: 150px 0;
+    /* position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);  */
+}
+
+.hospital .hospital-wrap .hospital-text {
+    display: flex;
+    color: #232323;
+    /* margin-top: 5%; */
+    margin-bottom: 6.5%;
+}
+
+.hospital .hospital-wrap .hospital-text h3{
+    width: 520px;
+    /* width: 45%; */
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 2.5rem;
+    margin-right: 50px;
+}
+
+.hospital .hospital-wrap .hospital-text p {
+    font-family: 'Pretendard-Regular';
+    font-size: 1.25rem;
+}
+
+.hospital .hospital-wrap .hospital-logo {
+    /* max-width: 1000px; */
+    width: 83%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.hospital .hospital-wrap .hospital-logo img {
+    max-width: 50%;
+}
+
+.hospital .hospital-wrap .hospital-logo::before,
+.hospital .hospital-wrap .hospital-logo::after {
+    content: "";
+    width:  1097px;
+    border-bottom: 4px solid #fdfdfd;
+}
+
+.hospital .hospital-wrap .hospital-logo::before {
+    margin-bottom: 20px;
+}
+
+.hospital .hospital-wrap .hospital-logo::after {
+    margin-top: 20px;
+}
+
+.hospital .hospital-wrap .hospital-logo img {
+    margin: 15px;
+}
+
+/* 정보 */
+.information {
+    width: 100%;
+    /* height: 920px; */
+    background: url(../images/information.jpg) no-repeat 0 0;
+    background-size: cover;
+    position: relative;
+}
+
+.information .information-wrap {
+    /* width: 1200px; */
+    width: 62.5%;
+    margin: 0 auto;
+    display: flex;
+    padding: 150px 0;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.information .information-wrap .time-list {
+    /* width: 400px; */
+    width: 40%;
+    /* padding-top: 150px; */
+}
+
+.information .information-wrap .time-list h3 {
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 2.5rem;
+}
+
+.information .information-wrap .time-list ul {
+    font-family: 'Pretendard-Regular';
+    line-height: 2.5;
+    font-size: 1.25rem;
+}
+
+.information .information-wrap form {
+    /* width: 600px; */
+    width: 60%;
+    /* padding-top: 150px; */
+    padding-left: 30px;
+}
+
+.information .information-wrap form h3 {
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 2.5rem;
+}
+
+.information .information-wrap form div {
+    font-family: 'Pretendard-Regular';
+    /* display: inline-block; */
+    margin-bottom: 30px;
+}
+
+.information .information-wrap form div [type="text"],
+.information .information-wrap form div [type="tel"],
+.information .information-wrap form div [type="date"] {
+    /* width: 270px; */
+    width: 360px;
+    height: 35px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #fdfdfd;
+    margin-top: 10px;
+}
+
+.information .information-wrap form div textarea {
+    width: 600px;
+    height: 50px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #fdfdfd;
+    margin-top: 10px;
+}
+
+.information .information-wrap form div [type="text"] {
+    margin-right: 30px;
+}
+
+.information .information-wrap form .reservation-text button{
+    width: 166px;
+    height: 45px;
+    background-color: transparent;
+    border: 1px solid #fdfdfd;
+    color: #fdfdfd;
+    margin-top: 50px;
+}
+
+/* 예약하기 폼 모달창 */
+.form-layer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    overflow-y: scroll;  
+}
+
+.modal {
+    width: 100%;
+}
+
+.reservation-form {
+    max-width: 100%;
+    /* width: 530px; */
+    margin-top: 80px;
+    padding: 35px 50px;
+    background-color: #fdfdfd;  
+    color: #232323; 
+    font-family: 'Pretendard-Regular';
+    z-index: 2;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+}
+
+.reservation-form .reservation-form-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.reservation-form h3 {
+    font-size: 0.9375rem;
+    font-weight: 400;
+}
+
+.reservation-form p {
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 1.25rem;
+}
+
+.reservation-form span {
+    font-size: 0.8125rem;
+}
+
+.form-wrap {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.name_tel-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reservation-form .form-wrap div {
+    padding: 10px 0;
+}
+
+.reservation-form .form-wrap div label {
+    font-size: 0.875rem;
+}
+
+.reservation-form .form-wrap div input[type="text"],
+.reservation-form .form-wrap div input[type="tel"],
+.reservation-form .form-wrap div input[type="date"] {
+    /* width: 208px; */
+    width: 270px;
+    height: 55px;
+    padding: 10px;
+}
+
+.reservation-form .form-wrap div textarea {
+    /* width: 424px; */
+    width: 100%;
+    height: 130px;
+    padding: 10px;
+}
+
+.form-wrap .reservation-text input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+.form-wrap .reservation-text p, button {
+    font-family: 'Pretendard-Regular';
+    font-size: 0.875rem;
+}
+
+.form-wrap .reservation-text button {
+    width: 180px;
+    height: 55px;
+    text-align: center;
+    color: #CA7F52;
+    background-color: transparent;
+    border: 1px solid #CA7F52;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+/* 반응형 */
+@media screen and (max-width:1400px) {
+    .information .information-wrap form {
+        padding: 10px;
+    }
+
+    .information .information-wrap form .name_tel-wrap {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    /* 공통 */
+    .guide .guide-wrap .guide-text h3, 
+    .subjects .subjects-wrap .subjects-text h3,
+    .hospital .hospital-wrap .hospital-text h3,
+    .information .information-wrap .time-list h3,
+    .information .information-wrap form h3 {
+        font-size: 1.875rem;
+    }
+
+    /* Main visual */
+    .main-visual img {
+        height: 699px;
+    }
+
+    .main-visual .main-visual-wrap .main-visual-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .main-visual .main-visual-wrap .scroll-text {
+        display: none;
+    }
+
+    .visual-text-deco {
+        display: none;
+    }
+
+    .reservation-icon {
+        display: none;
+    }
+
+    /* 예약하기 폼 모달 */
+    .name_tel-wrap {
+        flex-direction: column;
+    }
+
+    .reservation-form .form-wrap div input[type="text"],
+    .reservation-form .form-wrap div input[type="tel"],
+    .reservation-form .form-wrap div input[type="date"] {
+        width: 100%;
+    }
+
+    /* 이용안내 */ 
+    .guide .guide-wrap {
+        flex-direction: column-reverse;
+        text-align: center;
+        /* margin-top: 4.6%; */
+    }
+
+    .guide .guide-wrap .guide-text button {
+        margin: 20px auto;
+    }
+
+    /* 진료과목 */
+    .subjects .subjects-wrap {
+        width: 100%;
+    }
+
+    .subjects .subjects-wrap .subjects-text {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .subjects .subjects-wrap .subjects-text h3 {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* 협력기관 */
+    .hospital .hospital-wrap .hospital-text {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hospital .hospital-wrap .hospital-text h3 {
+        margin-right: 0;
+    }
+
+    .hospital .hospital-wrap .hospital-logo {
+        width: 100%;
+    }
+    
+    .hospital .hospital-wrap .hospital-logo img {
+        margin: 0;
+    }
+
+    /* 정보 */
+    .information .information-wrap {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .information .information-wrap .time-list {
+        width: 100%;
+    }
+
+    .information .information-wrap .time-list ul {
+        line-height: inherit;
+    }
+
+    .information .information-wrap form  h3 {
+        text-align: center;
+    }
+
+    .information .information-wrap form .name_tel-wrap {
+        flex-direction: column;
+    }
+
+    .information .information-wrap form {
+        width: 100%;
+        padding-top: 30px;
+        text-align: left;
+        /* padding-left: 0; */       
+    }
+
+    .information .information-wrap form div [type="text"],
+    .information .information-wrap form div [type="tel"],
+    .information .information-wrap form div [type="date"],
+    .information .information-wrap form div textarea  {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {        
+        /* Main visual - 예약 폼 모달창 */
+        .modal .reservation-form {
+            width: 100%;
+        }
+
+        /* 진료과목 */
+        .subjects .subjects-wrap .subjects-list ul li {
+            font-size: 11px;
+        }
+
+        /* 협력기관 */
+        .hospital .hospital-wrap .hospital-logo::before,
+        .hospital .hospital-wrap .hospital-logo::after {
+            display: none;
+        }
+
+        /* 정보 */
+        .information .information-wrap {
+            width: 100vw;
+            padding: 10px;
+        }
+
+        .information .information-wrap .time-list {
+            width: 100%;
+        }
+
+        .information .information-wrap .time-list ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 10px;
+        }
+
+        .information .information-wrap .time-list ul li {
+            font-size: 1rem;
+        }
+
+        .information .information-wrap form {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+}

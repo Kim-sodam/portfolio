@@ -1,0 +1,123 @@
+/* sub page 인재채용 - 채용안내 css */
+/* 공통 */
+section {
+    overflow-x: hidden;
+}
+
+/* 인재상 */
+.r .r-text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.r .r-text-wrap .r-text {
+    text-align: center;
+}
+
+.r .r-text-wrap .r-text .r-text01 p {
+    font-size: 2.5rem;  /*46px*/
+    font-weight: 800;
+    padding-top: 120px;
+}
+
+.r .r-text-wrap .r-text .r-text02 p {
+    font-size: 1.875rem; /*30px*/
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.r .r-text-wrap .r-text .r-text03 p {
+    font-size: 1.25rem; /*20px*/
+    margin: 45px 0;
+}
+
+.r .r-text-wrap .r-text-img img {
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+/* 채용순서 */
+.recruit-order {
+    position: relative;
+}
+
+.recruit-order .r-order-wrap .r-bg img{
+    width: 100%;
+}
+  
+.recruit-order .r-order-wrap .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.recruit-order .r-order-wrap .container .r-order-imgs {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.recruit-order .r-order-wrap .container .r-order-imgs img {
+    max-width: 20%;
+    max-height: 100%;
+    margin: 0 auto;
+    margin-right: 2.7%;
+}
+
+.recruit-order .r-order-wrap .container .r-order-imgs .img:nth-child(4) {
+    margin-right: 0;
+}
+
+.recruit-order .r-order-wrap .container .r-order-imgs .r-btn>button {
+    width: 260px;
+    height: 70px;
+    border: none;
+    font-size: 1.125rem; /*18px*/
+    color: #002BA0;
+    text-align: center;
+    background-color: rgba(218, 225, 252, 0.7);
+    backdrop-filter: blur(10px);
+    margin-top: 5%;
+}
+
+/* 채용순서 button hover style effect */
+.recruit-order .r-order-wrap .container .r-order-imgs .r-btn>button:hover {
+    background-color: rgba(0, 53, 199, 0.69);
+    font-size: 1.25rem; /*20px*/
+    color: #fdfdfd;
+}
+
+/* desktop first */
+/* sub page 인재채용 - 채용 안내 반응형 */
+@media screen and (max-width:1200px) {
+    /* 인재상 */
+    .r .r-text-wrap .r-text .r-text01 p {
+      font-size: 1.375rem; /*22px*/
+      font-weight: 900;
+      padding-top: 50px;
+    }
+  
+    .r .r-text-wrap .r-text .r-text02 {
+      display: none;
+    }
+  
+    .r .r-text-wrap .r-text .r-text03 p {
+      font-size: 1.25rem; /*20px*/
+      margin: 10px 0 20px;
+      font-weight: 400;
+    }
+  
+    .r .r-text-wrap .r-text-img img {
+      margin-bottom: 30px;
+    }
+  
+    /* 채용순서 */
+    .recruit-order .r-order-wrap .container .r-order-imgs .r-btn>button {
+      width: 200px;
+      height: 40px;
+      font-size: 0.9375rem; /*15px*/
+    }
+  }

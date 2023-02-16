@@ -1,0 +1,532 @@
+/* 공통 */
+html, body {
+    /* height: 100%; */
+    /* height 값을 지정해서 줘버리면 header scroll event 적용 안됨! */
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
+}
+
+section {
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+button {
+    border: 0;
+    text-align: center;
+    font-family: "SUIT-tff";
+}
+
+/* main-visual */
+#main-visual{
+    position: relative;
+}
+
+#main-visual .swiper .swiper-wrapper .swiper-slide img{
+    width: 100%;
+}
+
+/* main-visual text */
+#main-visual .swiper .swiper-wrapper .swiper-slide .main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: fadeUp 1.5s linear;
+}
+
+/* main-visual text animation effect */
+@keyframes fadeUp {
+    0% {
+        top: 40%;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+#main-visual .swiper .swiper-wrapper .swiper-slide .main-text span {
+    font-size: 4.125rem; /*66px*/
+    font-weight: 900;
+}
+
+#main-visual .swiper .swiper-wrapper .swiper-slide .main-text p {
+    font-size: 1.875rem; /*30px*/
+    font-weight: 300;
+}
+
+#main-visual .swiper .swiper-wrapper .swiper-slide .main-text p:last-child {
+    font-size: 1.250rem; /*20px*/
+}
+
+/* slider indicator */
+.btn-next img{
+    position: absolute;
+    bottom: 9px;
+    right: 4%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-prev img{
+    position: absolute;
+    bottom: 9px;
+    left: 4%;
+    transform: translate(-50%, -50%);
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+span.swiper-pagination-bullet{
+    width: 13px;
+    height: 13px;
+    border: 1px solid #fff;
+    background: transparent;
+    opacity: 1;
+}
+
+span.swiper-pagination-bullet-active { /* 현재 선택된 슬라이드의 불릿 css 변경 */
+    background: #fff;
+    width: 32px; 
+    height: 13px;
+    border-radius: 10px;
+}
+
+.swiper-indicator{
+    width: 150px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+}
+
+/* main-visual SCROLL */
+#main-visual .swiper .swiper-wrapper .swiper-slide .scroll{
+    position: absolute;
+    right: 20px;
+    bottom: 70px;
+    width: 20px;
+    height: 134px;
+}
+#main-visual .swiper .swiper-wrapper .swiper-slide .scroll img{
+    width: 20px;
+    max-height: 134px;
+    position: absolute;
+    top: 0;
+    /* left: 800px; */
+    animation: motion 0.6s linear infinite alternate; 
+}
+
+/* main-visual SCROLL animation effect*/
+@keyframes motion {
+    0% {top: 0;}
+	100% {top: 20px;}
+} 
+
+/* business */
+#section2 {
+    width: 100%; 
+}
+
+#section2 .business-wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#section2 .business-wrap .business-image img {
+    /* width: 640px; */
+    width: 100%;  
+    max-height: 50vh;
+}
+
+#section2 .business-wrap .business-image {
+    width: calc(100% / 3);
+    position: relative;
+}
+
+#section2 .business-wrap .business-image p {
+    width: 70%;
+    font-size: 3.125rem; /*50px*/
+    font-weight: 900;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* business image hover effect */
+#section2 .business-wrap .business-image::before { /*위*/
+    display: block;
+    content: "";
+    width: 0;
+    height: 6px;
+    background-color: #002BA0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    transition: all 0.5s;
+}
+
+#section2 .business-wrap .business-image::after { /*아래*/
+    display: block;
+    content: "";
+    width: 0;
+    height: 6px;
+    background: #287647;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 8;
+    transition: all 0.5s;
+}
+
+#section2 .business-wrap .business-image a::after { /*왼쪽*/
+    display: block;
+    content: "";
+    width: 6px;
+    height: 0;
+    background: #002BA0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    transition: all 0.5s;
+}
+
+#section2 .business-wrap .business-image a::before { /*오른쪽*/
+    display: block;
+    content: "";
+    width: 6px;
+    height: 0;
+    background: #287647;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 8;
+    transition: all 0.5s;
+}
+
+#section2 .business-wrap .business-image:hover::before {
+    width: 100%;
+}
+
+#section2 .business-wrap .business-image:hover::after {
+    width: 100%;
+}
+
+#section2 .business-wrap .business-image:hover a::before {
+    height: 100%;
+}
+
+#section2 .business-wrap .business-image:hover a::after {
+    height: 100%;
+}
+
+/* rd & recruit - 공통 */
+#section3 .rd .rd_text-wrap,
+.recruit_text-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#section3 .rd .rd_text-wrap .rd_text,
+.recruit_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#section3 .rd .rd_text-wrap .rd_text span:first-child,
+.recruit_text span:first-child {
+    font-size: 2.188rem; /*35px*/
+    margin-bottom: 10px;
+}
+
+#section3 .rd .rd_text-wrap .rd_text span:last-child,
+.recruit_text span:last-child {
+    font-size: 1.125rem; /*18px*/
+}
+
+#section3 .rd .rd_text-wrap .rd_text p,
+.recruit_text p {
+    font-size: 3.438rem; /*55px*/
+    font-weight: 900;
+    margin: 30px 0 56px 0;
+}
+
+#section3 .rd .rd_text-wrap button,
+.recruit_text-wrap button,
+.btn-recruit {
+    font-size: 1.125rem; /*18px*/
+    margin: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+#section3 .rd .rd_text-wrap button {
+    color: #000;
+}
+
+.recruit_text-wrap button, .btn-recruit {
+    color: #fdfdfd;
+}
+
+/* rd & recruit hover style - 공통 */
+#section3 .rd .rd_text-wrap button:hover,
+.recruit_text-wrap button:hover,
+.btn-recruit:hover {
+    background-color: rgba(0, 53, 199, 0.69);
+    font-weight: 500;
+    font-size: 1.25rem; /*20px*/
+    color: #fdfdfd;
+}
+
+/* rd */
+#section3 {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/section3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.rd_text-wrap button {
+    width: 200px;
+    height: 50px;
+}
+
+/* recruit */
+#section4 {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/section4.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative
+}
+
+#section4 .recruit .recruit_text-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#section4 .recruit .recruit_text-wrap .recruit_text p {
+    width: 1100px;
+}
+
+#section4 .recruit .recruit_text-wrap .btn-recruit-wrap button {
+    width: 150px;
+    height: 50px;
+}
+
+#section4 .recruit .recruit_text-wrap .btn-recruit-wrap .btn-recruit{
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+}
+
+/* TOP button */
+.top {
+    width: 20px;
+    height: 134px;
+    position: absolute;
+    bottom: 10%;
+    right: 20px;
+}
+
+.top img {
+    width: 20px;
+    max-height: 134px;
+    position: absolute;
+    top: 0;
+    animation: motion 0.6s linear 0s infinite alternate;
+}
+
+/* TOP button animation effect */
+@keyframes motion {
+    0% {top: 0px;}
+    100% {top: 20px;}
+}
+
+
+/* desktop first */
+/* Main page */
+@media screen and (max-width:1200px) {
+    /* main-visual */
+    #main-visual img{
+        height: 80vh;
+    }
+
+    /* main-visual text */
+    #main-visual .swiper .swiper-wrapper .swiper-slide .main-text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+
+    #main-visual .swiper .swiper-wrapper .swiper-slide .main-text span {
+        font-size: 2.5rem; /*40px*/
+        font-weight: 900;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    #main-visual .swiper .swiper-wrapper .swiper-slide .main-text p {
+        font-size: 1.25rem; /*20px*/
+        font-weight: 300;
+    }
+
+    #main-visual .swiper .swiper-wrapper .swiper-slide .main-text p:last-child {
+        font-size: 1rem; /*16px*/
+    }
+
+    /* main-visual slide indicator */
+    .btn-next, .btn-prev{
+        display: none;
+    }
+
+    /* main-visual SCROLL */
+    #main-visual .swiper .swiper-wrapper .swiper-slide .scroll {
+        display: none;
+    }
+
+    /* business */
+    #section2 .business-wrap .business-image {
+        width: 50%;
+        height: 100%;
+    }
+
+    #section2 .business-wrap .business-image img{
+        width: 100%;
+        height: 30vh;
+    }
+
+    #section2 .business-wrap .business-image p {
+        width: 75%;
+        font-size: 2.25rem; /*36px*/
+    }
+
+    /* business image hover style effect - delete  */
+    #section2 .business-wrap .business-image {
+        pointer-events: none;
+    }
+
+    /* rd & recruit hover style - 공통 */
+    #section3 .rd .rd_text-wrap .rd_text p,
+    #section4 .recruit .recruit_text-wrap .recruit_text p {
+        display: none;
+    }
+
+    #section3 .rd .rd_text-wrap .rd_text span:first-child,
+    #section4 .recruit .recruit_text-wrap .recruit_text span:first-child {
+        font-size: 1.5625rem; /*25px*/
+        margin-bottom: 5px;
+    }
+
+    #section3 .rd .rd_text-wrap .rd_text span:last-child,
+    #section4 .recruit .recruit_text-wrap .recruit_text span:last-child {
+        font-size: 1rem; /*16px*/
+    }
+
+    #section3 .rd .rd_text-wrap button,
+    #section4 .recruit .recruit_text-wrap button {
+        font-size: 1.125rem; /*18px*/
+        margin-top: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        color: #fdfdfd;
+    }
+
+    /* rd & recruit button hover style effect - delete  */
+    #section3 .rd .rd_text-wrap button:hover,
+    #section4 .recruit .recruit_text-wrap button:hover {
+        background-color: inherit;
+        font-weight: 100;
+        font-size: 1.125rem; /*18px*/
+    }
+
+    /* TOP button */
+    .top{
+        display: none;
+    }
+}
+
+/* Mobile second */
+@media screen and (max-width:767px) {
+    /* main-visual */
+    #main-visual .swiper .swiper-wrapper .swiper-slide .main-text span:first-child {
+        display: none;
+    }
+
+    #main-visual .swiper .swiper-wrapper .swiper-slide .main-text .p-1 {
+        display: none;
+    }
+
+    /* business */
+    #section2 .business-wrap{
+        height: 100vh;
+    }
+
+    #section2 .business-wrap .business-image p{
+        font-size: 1.5625rem; /*25px*/
+    }
+
+    #section2 .business-wrap .business-image{
+        width: 100%;
+        height: calc(100%/6);
+    }
+
+    #section2 .business-wrap .business-image img{
+        height: 450px;
+    }
+   
+}
+
+
+
+
+
+

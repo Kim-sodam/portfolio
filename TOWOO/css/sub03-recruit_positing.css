@@ -1,0 +1,68 @@
+/* sub page 인재채용 - 채용공고 css */
+body {
+    color: #232323;
+}
+
+.board-header {
+    padding: 1% 0;
+}
+
+.board-header h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,43,160,0.25);
+}
+
+.board {
+    font-size: 0.9375rem;
+    text-align: center;
+}
+
+.board .board-wrap .board-body table {
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+.board .board-wrap .board-body table thead {
+    color: #002BA0;
+    font-weight: 600;
+    background-color: rgba(0,43,160,0.2);
+}
+
+.board .board-wrap .board-body table tr {
+    height: 50px;
+}
+
+.board .board-wrap .board-body table tr td {
+    border-bottom: 1px solid #9c9c9c;
+}
+
+.board .board-wrap .board-body table tbody tr td:nth-child(3) {
+    cursor: pointer;
+}
+
+.board .board-wrap .board-body table tbody tr td>span {
+    font-size: 0.8125rem;
+    padding: 5px;
+    color: #fdfdfd;
+    border: 1px solid #000;
+    background-color: #002BA0;
+}
+
+@media screen and (max-width:1200px) {
+    .board-header h2 {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width:769px) {
+    .board-header h2 {
+        padding-left: 10px;
+    }
+
+    .board .board-wrap .board-body table tr td:nth-child(1) {
+        display: none;
+    }
+}

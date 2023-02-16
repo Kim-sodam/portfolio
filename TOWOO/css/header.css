@@ -1,0 +1,242 @@
+/* header */
+#header {
+    width: 100%;
+    height: 85px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 88;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+#header.active{
+    background-color: rgba(0, 53, 199, 0.69);
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+/* logo */
+#header .logo-wrap {
+    padding: 0 40px;
+}
+
+#header .logo-wrap img {
+    width: 120px;
+}
+
+/* gnb menu */
+#header .gnb-wrap ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .gnb-wrap ul li {
+    line-height: 85px;
+    padding: 0 40px;
+}
+
+/* gnb menu 하위메뉴 - depth2*/
+#header .gnb-wrap .depth2 {
+    width: 100%;
+    height: 90px;
+    background-color: #fdfdfd;
+    color: #2f2f2f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 48%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+#header .gnb-wrap .depth2 ul {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+#header .gnb-wrap .depth2 ul li {
+    display: flex;
+}
+
+/* gnb menu 오른쪽 */
+#header .gnb-right ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .gnb-right ul li {
+    padding: 0 40px;
+}
+
+#header .gnb-right img, 
+#header .gnb-right i {
+    vertical-align: middle;
+}
+
+#header .gnb-right ul img {
+    margin-right: 5px;
+}
+
+/* gnb 호버 스타일 */
+.gnb-wrap ul a:hover {
+    color: rgba(0, 53, 199, 0.69);
+    font-weight: 900;
+    font-size: 1.3125rem; /*21px*/
+}
+
+/* 햄버거메뉴 */
+#allmenu {
+    width: 100vw;
+    height: 1080px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fdfdfd;
+    color: #2f2f2f;
+    display: flex; 
+    z-index: 999;
+    overflow-y: scroll;
+}
+
+#allmenu .allmenu-header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+#allmenu .allmenu-header .logo img {
+    width: 60px;
+}
+
+#allmenu .allmenu-wrap {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
+/* jQuery 추가 클래스 */
+.menu_color {
+    background-color: #002BA0;
+    color: #fdfdfd;
+}
+
+#allmenu .allmenu-wrap .menu01 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#allmenu .allmenu-wrap .menu01 h2 {
+    width: 100%;
+    height: 60px;
+    font-size: 1.375rem; /*22px*/
+    font-family: 'SUIT-Bold';
+    text-align: center;
+    line-height: 60px;
+}
+
+#allmenu .allmenu-wrap .menu01::before {
+    content: "";
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #d3d3d3;
+    position: absolute;
+    top: 1;
+    left: 0;
+}
+
+#allmenu .allmenu-wrap .menu01 h2::after {
+    content: "";
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #d3d3d3;
+    position: absolute;
+    top: 1;
+    left: 0;
+}
+
+#allmenu .allmenu-wrap .menu01 .menu02 {
+    padding: 10px 0;
+}
+
+#allmenu .allmenu-wrap .menu01 .menu02 .menu02-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+#allmenu .allmenu-wrap .menu01 .menu02 .menu02-list h3 {
+    font-size: 1.1875rem; /* 19px */
+    font-family: 'SUIT-Bold';
+    text-align: center;
+}
+
+#allmenu .allmenu-wrap .menu01 .menu02 .menu02-list ul {
+    display: flex;
+    margin-top: 3px;
+    font-size: 1.0625rem; /* 17px */
+}
+
+#allmenu .allmenu-wrap .menu01 .menu02 .menu02-list ul li {
+    padding: 10px;
+}
+
+/* desktop first */
+/* header */
+@media screen and (max-width:1200px) {
+    /* header */
+    #header {
+        height: 60px;
+    }
+
+    /* logo */
+    #header .logo-wrap {
+        padding: 0 20px;
+    }
+
+    #header .logo-wrap img {
+        width: 95px;
+    }
+
+    /* gnb menu */
+    #header .gnb-wrap ul {
+        display: none;
+    }
+
+    /* gnb menu 오른쪽 */
+    #header .gnb-right ul li {
+        padding: 0 20px;
+    }
+
+    #header .gnb-right ul li:last-child {
+        margin-right: 20px;
+    }
+
+    /* 햄버거메뉴 */
+    #allmenu .allmenu-wrap .menu01 h2 {
+        font-size: 1.125rem; /*18px*/
+    }
+
+    #allmenu .allmenu-wrap .menu01 .menu02 .menu02-list ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #allmenu .allmenu-wrap .menu01 .menu02 .menu02-list h3 {
+        font-size: 1.0625rem; /*17px*/
+    }
+}

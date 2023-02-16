@@ -1,0 +1,36 @@
+/* sub page css */
+/* sub page header */
+.sub-header {
+    width: 100%;
+}
+
+.sub-header .back-btn {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.sub-header .back-btn a {
+    width: 250px;
+    height: 50px;
+    border: 1px solid #232323;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.25rem;
+}
+
+.sub-header .back-btn a:hover {
+    background-color: #232323;
+    color: #fdfdfd;
+}
+
+/* sub page main */
+.box {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.box img {
+    width: 100%;
+}

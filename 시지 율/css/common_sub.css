@@ -1,0 +1,63 @@
+/* sub page 공통 css */
+/* sub-visual */
+.sub-visual .sub-visual-wrap {
+    position: relative;
+}
+
+.sub-visual img {
+    width: 100%;
+    max-height: 685px;
+}
+
+.sub-visual .sub_visual-text {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    z-index: 9;
+}
+
+.sub-visual .sub-visual-wrap h1 {
+    font-size: 3.125rem;
+    font-family: 'Pretendard-Regular';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.sub-visual .sub_visual-text p {
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 3.125rem;
+}
+
+.sub-visual .sub_visual-text span {
+    font-family: 'Pretendard-Regular';
+    font-size: 1.875rem;
+}
+
+/* 반응형 */
+@media screen and (max-width:1600px) {
+    .sub-visual .sub-visual-wrap .sub03-text span {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    
+}
+
+@media screen and (max-width: 767px) {
+    .sub-visual img {
+        height: 500px;
+    }
+
+    .sub-visual .sub-visual-wrap h1{
+        display: block;
+    }
+
+    .sub-visual .sub_visual-text p {
+        display: none;
+    }
+}

@@ -1,0 +1,49 @@
+/* sub page 기업소개 - 인사말씀 css */
+.greeting .greeting-text-wrap{
+    display: flex;
+    padding: 100px 0 ;
+}
+
+.greeting .greeting-text-wrap .greeting-text {
+    text-align: center;
+}
+
+.greeting .greeting-text-wrap .greeting-text .greeting-text-title {
+    font-size: 2.1875rem; /*35px*/   
+}
+
+.greeting .greeting-text-wrap .greeting-text .greeting-text-contents {
+    text-indent: 20px;
+    font-size: 1.25rem; /*20px*/
+    padding: 30px;
+}
+
+.greeting .greeting-text-wrap .greeting-img img{
+    max-width: 350px;
+}
+
+.greeting .greeting-text-wrap .greeting-img h4{
+    font-size: 1.875rem; /*30px*/
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* desktop first */
+/* sub page 기업소개 - 인사말씀 반응형 */
+@media screen and (max-width:1200px) {
+    .greeting .greeting-text-wrap .greeting-text .greeting-text-title {
+        text-align: center;
+        font-size: 1.25rem;/*20px*/
+    }
+}
+
+@media screen and (max-width:769px) {
+    .greeting .greeting-text-wrap {
+        flex-direction: column;
+    }
+
+    .greeting .greeting-text-wrap .greeting-img img {
+        display: block; /* 이미지 가운데 정렬1 */
+        margin: 0 auto; /* 이미지 가운데 정렬2. 이 두가지 입력하면 가운데 정렬 잘 됨 */
+    }
+}

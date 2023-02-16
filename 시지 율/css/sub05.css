@@ -1,0 +1,276 @@
+/* sub page - 이용안내 css */
+.time {
+    color: #232323;
+    font-family: 'GangwonEdu_OTFBoldA';
+}
+
+.time-wrap {
+    width: 62.5%;
+    margin: 50px auto 85px ;
+}
+
+.time-wrap h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 6px solid #D1C4A7;
+    text-align: center;
+    font-size: 2.25rem;
+}
+
+.timetable tr {
+    height: 85px;
+    border-bottom: 1px solid #232323;
+}
+
+/* 예약안내 */
+.reservation {
+    width: 100%;
+    /* height: 860px; */
+    background-color: #F0E7D6;
+    color: #232323;
+}
+
+.reservation-wrap {
+    width: 62.5%;
+    margin: 0 auto;
+}
+
+.reservation-wrap h2 {
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.reservation-wrap .contact-wrap {
+    display: flex;
+    justify-content: center;
+    font-family: 'GangwonEdu_OTFBoldA';
+}
+
+.reservation-wrap .contact-wrap .contact-text {
+    width: 380px;
+    height: 184px;
+    background-color: #D1C4A7;
+    text-align: center;
+}
+
+.reservation-wrap .contact-wrap .contact:first-child {
+    margin-right: 50px;
+}
+
+.reservation-wrap .contact-wrap .contact .contact-text {
+    padding-top: 48px;
+}
+
+.reservation-wrap .contact-wrap .contact .mail {
+    padding-top: 64px;
+}
+
+.reservation-wrap .contact-wrap .contact .contact-text h5 {
+    font-size: 1.125rem;
+    color: #68744C;
+}
+
+.reservation-wrap .contact-wrap .contact .contact-text span {
+    font-size: 1.875rem;
+}
+
+form {
+    /* width: 966px; */
+    width: 80.5%;
+    margin: 30px auto;
+    font-family: 'Pretendard-Regular';
+    font-size: 1.1875rem;
+}
+
+form .name_phone {
+    display: flex;
+    justify-content: space-between;
+}
+
+form div input[type="text"],
+form div input[type="tel"],
+form div input[type="date"] {
+    width: 460px;
+    /* width: 47.6%; */
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #232323;
+    background-color: transparent;
+    padding: 10px;
+    margin: 20px 0 10px;
+}
+
+form div textarea {
+    width: 100%;
+    height: 70px;
+    border: none;
+    border-bottom: 1px solid #232323;
+    background-color: transparent;
+    padding: 10px;
+    margin: 20px 0 10px;
+}
+
+form .reservation-text {
+    padding-bottom: 84px;
+}
+
+form .reservation-text label {
+    font-size: 0.8785rem;
+}
+
+form .reservation-text input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+form .reservation-text button {
+    width: 166px;
+    height: 45px;
+    border: 1px solid #232323;
+    background-color: transparent;
+    font-size: 0.8125rem;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+/* 오시는 길 */
+.map {
+    color: #232323;
+    font-family: 'GangwonEdu_OTFBoldA';
+    margin-top: 50px;
+}
+
+.map h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.map iframe {
+    width: 100%;
+    height: 580px;
+    border: 0;
+}
+
+.map .map-text {
+    width: 62.5%;
+    margin: 30px auto 50px;
+}
+
+.map .map-text .address {
+    display: flex;
+}
+
+.map .map-text .address h3 {
+    font-size: 2.5rem;
+}
+
+.map .map-text .address p {
+    font-family: 'Pretendard-Regular';
+    font-size: 1.25rem;
+}
+
+.map .map-text .address02 p:last-child {
+    font-size: 1rem;
+}
+
+.map .map-text .address01 {
+    margin-bottom: 50px;
+}
+
+.map .map-text .address01 h3{
+    margin-right: 160px;
+}
+
+.map .map-text .address02 h3{
+    margin-right: 100px;
+}
+
+/* 반응형 */
+@media screen and (max-width:1830px) {
+    /* 예약안내 */
+    .reservation form .name_phone {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    /* 이용시간 */
+    .time .time-wrap {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* 예약 안내 */
+    form div input[type="text"],
+    form div input[type="tel"],
+    form div input[type="date"] {
+        width: 100%;
+    }
+
+    /* 오시는 길 */
+    .map .map-text .address {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .map .map-text .address h3 {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* 공통 */
+    .time .time-wrap h2,
+    .reservation .reservation-wrap h2,
+    .map h2 {
+        font-size: 1.875rem;
+    }
+
+
+    /* 이용시간 */
+    .time .time-wrap .timetable {
+        font-size: 1.25rem;
+    }
+
+    /* 예약안내 */
+    .reservation .reservation-wrap {
+        width: 100%;
+    }
+
+    .reservation .reservation-wrap .contact-wrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reservation-wrap .contact-wrap .contact:first-child {
+        margin-right: 0;
+    }
+
+    .reservation .reservation-wrap .contact-wrap .contact:first-child {
+        margin-bottom: 20px;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* 오시는 길 */
+    .map .map-text {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .map .map-text .address h3 {
+        font-size: 1.5625rem;
+    }
+}
+

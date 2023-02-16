@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시지 율 | 둘러보기</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common_sub.css">
+    <link rel="stylesheet" href="./css/sub04.css">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./icons/favicon.ico">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+    <!-- //Header -->
+
+    <!-- sub-visual -->
+    <section class="sub-visual">
+        <div class="sub-visual-wrap">
+            <img src="./images/sub04-interior-visual.jpg" alt="둘러보기 페이지 장식 이미지">
+            <h1>둘러보기</h1>
+            <div class="sub_visual-text sub03-text">
+                <p>찾아주신 모든 분들이 편하도록<br>포근한 율이 되겠습니다.</p>
+                <span>방문 후, 편안한 율을 만나세요.</span>
+            </div>
+        </div>
+    </section>
+    <!-- //sub-visual -->    
+    
+    <!-- 내부 소개 -->
+    <section class="interior">
+        <h2>시지 율 내부 시설</h2>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide01"></div>
+                <div class="swiper-slide slide02"></div>
+                <div class="swiper-slide slide03"></div>
+                <div class="swiper-slide slide04"></div>
+                <div class="swiper-slide slide05"></div>
+                <div class="swiper-slide slide06"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- //내부 소개 -->
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <!-- //Footer -->
+
+    <script src="./js/header_footer.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper(Swiper slide) -->
+    <script>
+      let swiper = new Swiper(".mySwiper", {
+        pagination: { // 호출(pager) 여부
+          el: ".swiper-pagination", // 버튼(불릿)을 담을 태그 설정
+          clickable: true // 불릿 클릭시 클릭한 불릿의 슬라이드로 이동
+        },
+        autoplay:{ // 슬라이드 자동재생
+          delay: 3000, // 자동재생 시간 설정
+          disableOnInteraction: false // 스와이프 후 자동재생: true: 스와이프 후 자동재생X, false: 스와이프 후 자동재생O
+        },
+        loop:true, // 슬라이드 반복 여부 -> 사용하지 않을 시 false로 변경하거나 loop 삭제
+      });
+    </script>
+</body>
+</html>

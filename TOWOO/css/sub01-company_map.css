@@ -1,0 +1,16 @@
+/* sub page 기업소개 - 오시는 길 css */
+#sub-main .map {
+    padding: 50px 0;
+}
+
+#sub-main .map h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+#sub-main .map iframe {
+    width: 100%;
+    height: 50vh;
+    border: none;
+}

@@ -1,0 +1,8 @@
+/* sub page 기업소개 - 임원진 및 조직도 css */
+#sub-main .sub-visual .sub-visual-text {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#sub-main .organization img {
+    width: 100%;
+}

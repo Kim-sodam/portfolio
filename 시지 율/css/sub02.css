@@ -1,0 +1,74 @@
+/* sub page - 치료진 css */
+/* 치료진 소개 */
+.doctor {
+    color: #232323;
+}
+
+.doctor-wrap {
+    width: 1200px;
+    /* width: 62.5%; */
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.doctor-wrap .doctor-img h2,
+.doctor-wrap .doctor-text h2 {
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.doctor-wrap .doctor-img {
+    max-width: 478px;
+}
+
+.doctor-wrap .doctor-img h2 {
+    text-align: center;
+}
+
+.doctor-wrap .doctor-text {
+    width: 617px;
+    padding: 0 10px;
+    /* padding-left: 105px; */
+}
+
+.doctor-wrap .doctor-text ul {
+    font-family: 'Pretendard-Regular';
+    font-size: 1.5625rem;
+}
+
+/* 반응형 */
+@media screen and (max-width:1200px) {
+    .sub-visual .sub-visual-wrap .sub_visual-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .sub-visual .sub-visual-wrap .sub_visual-text span {
+        display: none;
+    }
+
+    .doctor-wrap {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+    }
+
+    .doctor-wrap .doctor-img h2,
+    .doctor-wrap .doctor-text h2 {
+        font-size: 1.875rem;
+    }
+
+    .doctor-wrap .doctor-text {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+

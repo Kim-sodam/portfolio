@@ -1,0 +1,135 @@
+/* sub page - 진료과목 css */
+/* 진료과목 서브페이지 비주얼 */
+.subjects {
+    color: #232323;
+}
+
+.sub03-text {
+    /* width: 1068px; */
+    width: 55.6%;
+}
+
+/* 진료과목 종류 */
+.subjects {
+    background: url(../images/sub03-deco.jpg) no-repeat 0 0;
+    background-size: cover;
+}
+
+.subjects .subjects-wrap ,
+.healing .healing-wrap {
+    /* width: 1200px; */
+    width: 62.5%;
+    margin: 0 auto;
+}
+
+.subjects .subjects-wrap {
+    padding: 50px 0 133px;
+}
+
+.subjects .subjects-wrap .subjects-list h2,
+.healing .healing-wrap h2 {
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.subjects .subjects-wrap .subjects-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subjects .subjects-wrap .subjects-list ul li {
+    width: 380px;
+    height: 98px;
+    border: 1px solid #232323;
+    text-align: center;
+    line-height: 98px;
+    margin: 15px 0;
+    font-family: 'Pretendard-Regular';
+    font-size: 1.375rem;
+}
+
+/* 치료기법 */
+.healing {
+    color: #232323;
+    padding-top: 50px;
+}
+
+.healing .healing-wrap h2 {
+    margin-bottom: 30px;
+}
+
+.healing .healing-wrap .healing-text {
+    display: flex;
+}
+
+.healing .healing-wrap .healing-text h3 {
+    /* width: 230px; */
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 1.875rem;
+}
+
+.healing .healing-wrap .healing-text p {
+    font-family: 'Pretendard-Regular';
+    font-size: 1.25rem;
+    padding-left: 50px;
+    margin-bottom: 10px;
+}
+
+.healing img {
+    width: 100%;
+    max-height: 500px;
+    margin-bottom: 100px;
+}
+
+/* 반응형 */
+@media screen and (max-width:1216px) {
+    /* 진료과목 종류 */
+    .subjects .subjects-wrap .subjects-list ul li {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .subjects .subjects-wrap .subjects-list h2,
+    .healing .healing-wrap h2 {
+        font-size: 1.875rem;
+    }
+
+    /*치료기법 */
+    .healing .healing-wrap .healing-text {
+        flex-direction: column;
+    }
+
+    .healing .healing-wrap .healing-text h3 {
+        text-align: center;
+    }
+
+    .healing .healing-wrap .healing-text p {
+        padding-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    /* 치료기법 소개 */
+    .healing .healing-wrap {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .healing .healing-wrap .healing-text h3 {
+        font-size: 1.5625rem;
+    }
+
+    .healing .healing-wrap .healing-text p {
+        margin-bottom: 30px;
+    }
+
+    .healing img {
+        display: none;
+    }
+
+}

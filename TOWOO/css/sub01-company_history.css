@@ -1,0 +1,8 @@
+/* sub page 기업소개 - 연혁 및 개요 css */
+#sub-main .sub-visual .sub-visual-text {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#sub-main .history img {
+    width: 100%;
+}

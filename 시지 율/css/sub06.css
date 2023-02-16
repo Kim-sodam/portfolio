@@ -1,0 +1,18 @@
+/* sub page - 공지사항 css */
+.announcement img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1200px) {
+    .sub-visual .sub-visual-wrap .sub_visual-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .sub-visual .sub-visual-wrap .sub_visual-text span {
+        display: none;
+    }
+}
