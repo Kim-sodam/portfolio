@@ -1,32 +1,20 @@
 /* 공통 */
 section {
-    scroll-behavior: smooth;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* main-visual */
 #main .main-visual .frame {
     width: 100vw;
     max-height: 100vh;
-}
-
-#main .main-visual .frame>img {
-    width: 100%;
-    height: 71vh;
-    z-index: 999;
-    position: relative; 
+    position: relative;
 }
 
 /* main-visual: 슬라이드 */
 #main .main-visual .frame .swiper { /* 슬라이드 크기 (원래 풀페이지 )*/
-    /* width: 100%;
-    height: 100%; */
     width: 90%;
-    height: 60vh; 
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 100%;
+    margin-top: 250px;
 }
 
 #main .main-visual .frame .swiper .swiper-slide {
@@ -47,7 +35,7 @@ section {
 #main .main-visual .frame .swiper .swiper-slide>img {
     display: block;
     width: 100%;
-    height: 69vh;    
+    height: 50vh;    
     margin: 0 auto;
 }
 
@@ -131,34 +119,55 @@ section {
     color: #fdfdfd;
 }
 
-/* News letter */
-#main .news-letter .news-letter-wrap {
+#main .artists .artist-text-wrap .artists-right .artists-right-img {
+    width: 65%;
+    margin: 0 auto;
+}
+
+#main .artists .artist-text-wrap .artists-right .artists-right-img img {
+    max-width: 100%;
+    vertical-align: bottom;
+    padding: 50px 0;
+} 
+
+/* News letter and contact */
+#main .LetterandContact {
+    display: flex;
+    align-items: center;
+}
+
+/* News letter and contact - News letter */
+#main .LetterandContact .LetterandContact-wrap {
     padding: 50px;
 }
 
-#main .news-letter .news-letter-wrap .news-letter-text h2 {
+#main .LetterandContact .LetterandContact-wrap .news-letter-text h2,
+#main .LetterandContact .contact h2 {
     font-size: var(--font-large);
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
 }
 
-#main .news-letter .news-letter-wrap .news-letter-text p {
+#main .LetterandContact .LetterandContact-wrap .news-letter-text p,
+#main .LetterandContact .LetterandContact-wrap .contact p,
+#main .LetterandContact .LetterandContact-wrap .contact address {
     font-size: var(--font-medium);
     font-family: 'Noto Sans KR', sans-serif;
     margin-bottom: 20px;
 }
 
-#main .news-letter .news-letter-wrap .subscribe .mail-input {
-    width: 25vw;
+#main .LetterandContact .LetterandContact-wrap .subscribe .mail-input {
+    /* width: 25vw; */
+    width: 70%;
     height: 5vh;
     padding: 10px;
     font-size: var(--font-small);
     border: 3px solid #232323;
 }
 
-#main .news-letter .news-letter-wrap .subscribe .sb-btn {
-    /* width: 10%; */
-    width: 12vw;
+#main .LetterandContact .LetterandContact-wrap .subscribe .sb-btn {
+    width: 28%;
+    /* width: 12vw; */
     height: 5vh;
     border: 3px solid #232323;
     font-size: var(--font-medium);
@@ -169,11 +178,74 @@ section {
     color: #fdfdfd;
 }
 
-#main .news-letter .news-letter-wrap .subscribe .sb-btn:hover {
+#main .LetterandContact .LetterandContact-wrap .subscribe .sb-btn:hover {
     color: #232323;
     background-color: #fdfdfd;
 }
 
+/* News letter and contact - contact */
+#main .LetterandContact .LetterandContact-wrap .contact {
+    padding: 20px 20px 20px 70px;
+    border-left: 1px solid #232323;
+}
+
+
+/* desktop first */
 @media screen and (max-width:1200px) {
-    
+    /* artists */
+    #main .artists .artist-text-wrap {
+        flex-direction: column-reverse;
+    }
+
+    #main .artists .artist-text-wrap .artists-right {
+        width: 100%;
+    }
+
+    #main .artists .artist-text-wrap .artists-right h3 {
+        font-size: 3rem;
+    }
+
+    #main .artists .artist-text-wrap .artists-left {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    #main .artists .artist-text-wrap .artists-left .artists-list-wrap {
+        width: 100%;
+        padding: 30px;
+    }
+
+    #main .artists .artist-text-wrap .artists-left .artists-list-wrap .artists-list li {
+        text-align: center;
+    }
+
+    /* News letter and contact */
+    #main .LetterandContact {
+        flex-direction: column;
+    }
+
+    /* News letter and contact - News letter */
+    #main .LetterandContact .LetterandContact-wrap {
+        width: 100%;
+    }
+
+    /* News letter and contact - contact */
+    #main .LetterandContact .LetterandContact-wrap .contact {
+        border: none;
+        padding: 0;
+    }
+}
+
+/* mobile second */
+@media screen and (max-width:769px) {
+    /* main-visual */
+    #main .main-visual .main-text {
+        font-size: var(--font-small);
+    }
+
+    /*  News letter and contact - News letter */
+    #main .LetterandContact .LetterandContact-wrap .subscribe .sb-btn {
+        font-size: 0.85rem;
+    }
 }

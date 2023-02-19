@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8BallTown | Home</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header_footer.css">
     <link rel="stylesheet" href="./css/main.css">
+    <!-- 제이쿼리 CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
      <!-- Link Swiper's CSS -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 </head>
@@ -22,7 +24,7 @@
                 <li><a href="#content01">Artists</a></li>
                 <li><a href="https://www.youtube.com/@8BallTown" target="_blank">Videos</a></li>
                 <li><a href="https://www.8balltown.store/" target="_blank">Store</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="#content02">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -33,18 +35,24 @@
         <!-- main-visual -->
         <section class="main-visual">
             <div class="frame">
-                <img src="./image/main-visual_frame.png" alt="main-visual 프레임">
+                <!-- <img src="./image/main-visual_frame.png" alt="main-visual 프레임 이미지"> -->
             <!-- Swiper -->
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="./image/main-visual1.jpg" alt="메인 비주얼 이미지">
+                            <img src="./image/main-visual1.jpg" alt="메인 비주얼 이미지1">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./image/main-visual2.jpg" alt="메인 비주얼 이미지">
+                            <img src="./image/main-visual2.jpg" alt="메인 비주얼 이미지2">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./image/main-visual3.jpg" alt="메인 비주얼 이미지">
+                            <img src="./image/main-visual3.jpg" alt="메인 비주얼 이미지3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/main-visual4.jpg" alt="메인 비주얼 이미지4">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/main-visual5.jpg" alt="메인 비주얼 이미지5">
                         </div>
                     </div>
                 </div>
@@ -65,33 +73,38 @@
                 <span>다양한 소속 아티스트를 살펴보세요.</span>
                 <div class="artists-list-wrap">
                     <ul class="artists-list">
-                        <li><a href="#">KIRIN</a></li>
-                        <li><a href="#">SFC.JGR</a></li>
-                        <li><a href="#">Noizeegu</a></li>
-                        <li><a href="#">meenoi</a></li>
-                        <li><a href="#">Zin</a></li>
-                        <li><a href="#">Xin Seha</a></li>
-                        <li><a href="#">WEKEYZ</a></li>
-                        <li><a href="#">Bronze</a></li>
-                        <li><a href="#">Monocat</a></li>
-                        <li><a href="#">Hookuo</a></li>
-                        <li><a href="#">DJ Jeyon</a></li>
-                        <li><a href="#">Jambino</a></li>
-                        <li><a href="#">Team NY</a></li>
-                        <li><a href="#">YOYO THE UNITY</a></li>
+                        <li class="member01">KIRIN</li>
+                        <li class="member02">SFC.JGR</li>
+                        <li class="member03">Noizeegu</li>
+                        <li class="member04">meenoi</li>
+                        <li class="member05">Zin</li>
+                        <li class="member06">Xin Seha</li>
+                        <li class="member07">Jason Lee</li>
+                        <li class="member08">YUNU</li>
+                        <li class="member09">Bronze</li>
+                        <li class="member10">Monocat</li>
+                        <li class="member11">Hookuo</li>
+                        <li class="member12">DJ Jeyon</li>
+                        <li class="member13">DJ LIGHT</li>
+                        <li class="member14">Jambino</li>
+                        <li class="member15">Team NY</li>
+                        <li class="member16">YOYO THE UNITY</li>
                     </ul>
                 </div>
               </div>
               <div class="artists-right">
                 <h3>8BallTown</h3>
-
+                <div class="artists-right-img">
+                    <img src="./image/kirin.jpg" alt="">
+                </div>
             </div>
         </section>
         <!-- //artists -->
 
-        <!-- News letter -->
-        <section class="news-letter">
-            <div class="news-letter-wrap">
+        <!-- News letter and contact -->
+        <section class="LetterandContact">
+            <!-- News letter -->
+            <div class="LetterandContact-wrap">
                 <div class="news-letter-text">
                     <h2>News Letter</h2>
                     <p>8BallTown의 새로운 소식을 가장 먼저 만나보세요.</p>
@@ -102,6 +115,18 @@
                     <button class="sb-btn">Subscribe</button>
                 </div>
             </div>
+            <!-- //News letter -->
+            
+            <!-- contact -->
+            <div class="LetterandContact-wrap">
+                <div class="contact" id="content02">
+                    <h2>Contact</h2>
+                    <p>mgmt@8balltown.net</p>
+                    <p>+82 (0)70 4163 2393</p>
+                    <address>서울특별시 강남구 도산대로49길 6-8 마태빌딩4층</address>
+                </div>
+            </div>
+            <!-- //contact -->
         </section>
         <!-- //News letter -->
     </main>
@@ -113,6 +138,8 @@
     </footer>
     <!-- //footer -->
 
+    <script src="./js/headerScroll.js"></script>
+    <script src="./js/custom.js"></script>
 
      <!-- Swiper JS -->
      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
