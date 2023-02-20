@@ -73,6 +73,17 @@ html, body {
     font-size: 7rem; /* 112px */
 }
 
+/* 고양이 아이콘 */
+#main .main-visual .main-visual-box .cat-icon {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+#main .main-visual .main-visual-box .cat-icon img {
+    max-width: 130px;
+}
+
 /* 수영하는 아이콘 */
 #main .main-visual .main-visual-box .swim-icon {
     position: absolute;
