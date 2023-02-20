@@ -30,33 +30,75 @@ html, body {
 #main .main-visual {
     width: 100%;
     height: 100vh;
-    background: url(../images/main_right_visual.jpg)no-repeat;
+    background-color: #8ECFD3;
+    /* background: url(../images/main_right_visual.jpg)no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
+    position: relative; */
 }
 
 #main .main-visual .main-text {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 900;
+    transform: translate(-50%, -50%); */
+    padding: 17% 5%;
+    color: #fdfdfd;
+    font-family: 'Black Han Sans', sans-serif;
+    text-shadow: 2px 2px 2px #313131;
 }
 
-#main .main-visual .main-text>span {
-    font-size: 1.875rem; /* 30px */
+#main .main-visual .main-text .main-contents {
+    font-family: 'GmarketSansMedium';
+    font-size: 1.5625rem; /* 25px */
+    text-shadow: none;
+    color: #313131;
 }
+
+#main .main-visual .main-text .main-contents>span {
+    font-size: 2.5rem; /* 40px */
+
+}
+
+#main .main-visual .main-text .main-contents p {
+    margin-top: 20px;
+}
+
 
 #main .main-visual .main-text>p {
-    font-size: 6rem; /* 96px */
+    font-size: 7rem; /* 112px */
+}
+
+/* 수영하는 아이콘 */
+#main .main-visual .swim-icon {
+    position: absolute;
+    bottom: 0%;
+    left: 2%;
+    animation: swimming 10s infinite ease-out;
+}
+
+#main .main-visual .swim-icon img {
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+@keyframes swimming {
+    0% {
+        left: 0%;
+        opacity: 0;
+    }
+    100% {
+        left: 85%;
+        opacity: 1;
+    }
 }
 
 /* 무한회전 */
 #main .main-visual .infinity-circle {
     max-width: 15%;
     position: fixed;
-    bottom: 5%;
+    /* bottom: 5%; */
+    top: 5%;
     right: 2%;
     z-index: 88;
 }

@@ -28,95 +28,9 @@ xMark.addEventListener("click", (ev) => {
   popUp.classList.remove("active");
 });
 
-//도넛 차트
-//해당 부분에 도달하면 작동함
-function ActiveOnVisible__init() {
-  $(window).resize(ActiveOnVisible__initOffset);
-  ActiveOnVisible__initOffset();
-
-  $(window).scroll(ActiveOnVisible__checkAndActive);
-  ActiveOnVisible__checkAndActive();
-}
-
-function ActiveOnVisible__initOffset() {
-  $(".active-on-visible").each(function (index, node) {
-    let $node = $(node);
-
-    let offsetTop = $node.offset().top;
-    $node.attr("data-active-on-visible-offsetTop", offsetTop);
-
-    if (!$node.attr("data-active-on-visible-diff-y")) {
-      $node.attr("data-active-on-visible-diff-y", "0");
-    }
-
-    if (!$node.attr("data-active-on-visible-delay")) {
-      $node.attr("data-active-on-visible-delay", "0");
-    }
-  });
-
-  ActiveOnVisible__checkAndActive();
-}
-
-function ActiveOnVisible__checkAndActive() {
-  $(".active-on-visible:not(.actived)").each(function (index, node) {
-    let $node = $(node);
-
-    let offsetTop = $node.attr("data-active-on-visible-offsetTop") * 1;
-    let diffY = parseInt($node.attr("data-active-on-visible-diff-y"));
-    let delay = parseInt($node.attr("data-active-on-visible-delay"));
-
-    let callbackFuncName = $node.attr(
-      "data-active-on-visible-callback-func-name"
-    );
-
-    if ($(window).scrollTop() + $(window).height() + diffY > offsetTop) {
-      $node.addClass("actived");
-
-      setTimeout(function () {
-        $node.addClass("active");
-        if (window[callbackFuncName]) {
-          window[callbackFuncName]($node);
-        }
-      }, delay);
-    }
-  });
-}
-
-$(function () {
-  ActiveOnVisible__init();
-});
-/* 발견되면 활성화시키는 라이브러리 끝 */
-function Circle__run() {
-  $(".second.circle").each(function (index, node) {
-    let perNum = $(node).attr("circleProgress");
-
-    $(this)
-      .circleProgress({
-        value: perNum / 100,
-        startAngle: 300,
-        thickness: 10,
-        fill: {
-          gradient: ["#FFFACD", "#FFFACD"],
-          gradientAngle: Math.PI / 2,
-        },
-        animation: {
-          duration: 2200,
-          easing: "swing",
-        },
-        lineCap: "butt",
-        reverse: true,
-      })
-      .on("circle-animation-progress", function (event, progress) {
-        $(this)
-          .find(".circle-percent")
-          .html(Math.round(perNum * progress) + "<i>%</i>");
-      });
-  });
-}
-
 //main-visual 텍스트 타이핑 효과
-//원하는 텍스트 입력
-//\n을 이용하여 줄바꾸기가 가능하다!
+// 원하는 텍스트 입력
+// \n을 이용하여 줄바꾸기가 가능하다!
 const content =
   "Web Publisher";
 const text = document.querySelector(".main-text p");
